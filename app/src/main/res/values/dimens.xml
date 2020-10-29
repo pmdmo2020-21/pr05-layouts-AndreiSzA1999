@@ -2,4 +2,7 @@
 <resources>
     <dimen name="margin">8dp</dimen>
     <dimen name="margin_2x">16dp</dimen>
+    <dimen name="paddigder">40</dimen>
+    <dimen name="paddigde">40px</dimen>
+    <dimen name="separacion">40dp</dimen>
 </resources>
