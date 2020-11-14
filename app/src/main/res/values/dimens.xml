@@ -5,4 +5,5 @@
     <dimen name="paddigder">40</dimen>
     <dimen name="paddigde">40px</dimen>
     <dimen name="separacion">40dp</dimen>
+    <dimen name="viewmargin">10dp</dimen>
 </resources>

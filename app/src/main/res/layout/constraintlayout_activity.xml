@@ -1,6 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/header" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/lblrent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblbuy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/titulo"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:text="@string/titulo" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:text="@string/fecha" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="@dimen/viewmargin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/viewmargin"
+        android:background="@color/gray_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/boton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:layout_constraintEnd_toStartOf="@+id/boton4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:tint="@color/white" />
+
+
+    <TextView
+        android:id="@+id/lblValoracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/boton1"
+        android:paddingTop="5px"
+        android:text="@string/valoraciones"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblFamilia"
+        app:layout_constraintEnd_toEndOf="@+id/boton1"
+        app:layout_constraintStart_toStartOf="@+id/boton1" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/boton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/boton1"
+        android:src="@drawable/ic_family"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/boton3"
+        app:layout_constraintTop_toTopOf="@+id/boton3"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/lblFamilia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/boton2"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/boton1"
+        android:paddingTop="5px"
+        android:text="@string/Family"
+        app:layout_constraintEnd_toEndOf="@+id/boton4"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/boton4"
+        app:layout_constraintTop_toBottomOf="@+id/boton4" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/boton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toRightOf="@+id/boton2"
+        android:src="@drawable/tomato"
+        app:layout_constraintEnd_toStartOf="@+id/boton2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/boton4"
+        app:layout_constraintTop_toTopOf="@+id/boton4"
+        app:tint="@color/white" />
+
+
+    <TextView
+        android:id="@+id/lblTomate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/boton2"
+        android:layout_toRightOf="@+id/boton2"
+        android:paddingTop="5px"
+        android:text="@string/porcentaje"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblFamilia"
+        app:layout_constraintEnd_toEndOf="@+id/boton3"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="@+id/boton3" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/boton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toRightOf="@+id/boton3"
+        android:src="@drawable/ic_family"
+        app:layout_constraintEnd_toStartOf="@+id/boton3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/boton1"
+        app:layout_constraintTop_toTopOf="@+id/boton1"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/lblSimilar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/boton4"
+        android:layout_toRightOf="@+id/boton3"
+        android:paddingTop="5px"
+        android:text="@string/similar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblTomate"
+        app:layout_constraintEnd_toEndOf="@+id/boton2"
+        app:layout_constraintStart_toStartOf="@+id/boton2" />
+
+    <View
+        android:id="@+id/linea2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="@dimen/viewmargin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/viewmargin"
+        android:background="@color/gray_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblFamilia" />
+
+
+    <TextView
+        android:id="@+id/lblDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/lblDescripcion"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/linea2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
